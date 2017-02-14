@@ -15,6 +15,7 @@ RUN apt-get update -y \
 	&& rm /tmp/go.tar.gz \
 	&& curl -s -fLo /root/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim \
 	&& echo "let g:go_fmt_command = \"goimports\"" >> $HOME/.vimrc \
+	&& echo "filetype plugin indent on" >> $HOME/.vimrc \
 	&& git clone https://github.com/fatih/vim-go.git $HOME/.vim/pack/plugins/start/vim-go \
 	&& go get github.com/nsf/gocode \
 		  github.com/alecthomas/gometalinter \
