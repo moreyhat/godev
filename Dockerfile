@@ -26,9 +26,9 @@ RUN apt-get update -y \
 		  github.com/rogpeppe/godef \
 		  github.com/kisielk/errcheck \
 		  github.com/jstemmer/gotags \
+		  github.com/fatih/gomodifytags \
 		  github.com/klauspost/asmfmt/cmd/asmfmt \
 		  github.com/fatih/motion \
-		  github.com/zmb3/gogetdoc \
 		  github.com/zmb3/gogetdoc \
 		  github.com/josharian/impl
 
