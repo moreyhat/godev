@@ -3,7 +3,7 @@ FROM ubuntu:latest
 MAINTAINER moriyatto
 
 ENV ARCH amd64
-ENV GOVERSION 1.7.5
+ENV GOVERSION 1.9
 ENV HOME /root
 ENV PATH $PATH:/usr/local/go/bin
 ENV GOPATH $HOME/work
@@ -17,6 +17,7 @@ RUN apt-get update -y \
 	&& echo "let g:go_fmt_command = \"goimports\"" >> $HOME/.vimrc \
 	&& echo "filetype plugin indent on" >> $HOME/.vimrc \
         && echo "set encoding=utf-8" >> $HOME/.vimrc \
+	&& echo "export PATH=$PATH:/root/work/bin" \
 	&& git clone https://github.com/fatih/vim-go.git $HOME/.vim/pack/plugins/start/vim-go \
 	&& go get github.com/nsf/gocode \
 		  github.com/alecthomas/gometalinter \
